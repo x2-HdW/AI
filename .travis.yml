@@ -1,0 +1,3 @@
+language: cpp
+before_script: ./3rdparty/mwc.pl -type make AI.mwc
+script: make

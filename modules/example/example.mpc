@@ -1,0 +1,15 @@
+project(example) {
+  exename   = foo
+  includes += "."
+  includes += "./src"
+  includes += "./include"
+
+  Source_Files {
+    src/*.cpp
+  }
+
+  Header_Files {
+	include/*.h
+    src/*.h
+  }
+}

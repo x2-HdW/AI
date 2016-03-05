@@ -1,0 +1,6 @@
+workspace(AI) {
+	exclude {
+		doc
+		3rdparty
+	}
+}
