@@ -18,7 +18,9 @@ before_script:
     # init coverage to 0 (optional)
     - lcov --directory . --zerocounters
     # enable coverage
-    - export CXX_FLAGS=${CXX_FLAGS} -g -O0 --coverage
+    - echo $CXX_FLAGS
+    - export CXX_FLAGS="-g -O0 --coverage"
+    - echo $CXX_FLAGS
     
 script:
     # build
