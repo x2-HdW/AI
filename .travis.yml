@@ -1,7 +1,7 @@
 language: cpp
 before_script:
-    - ls -al
-    - ls -al 3rdparty
-    - ls -al 3rdparty/mpc
     - 3rdparty/mpc/mwc.pl -type make AI.mwc
-script: make
+script: 
+    - make
+    - ls -al modules/example
+    - modules/example/foo
