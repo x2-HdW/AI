@@ -1,6 +1,7 @@
 language: cpp
 before_script:
     - ls -al
-    - cd /
-    - tree
+    - ls -al 3rdparty
+    - ls -al 3rdparty/mpc
+    - 3rdparty/mpc/mwc.pl -type make AI.mwc
 script: make
