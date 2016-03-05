@@ -1,3 +1,5 @@
 language: cpp
-before_script: ./3rdparty/mwc.pl -type make AI.mwc
+before_script:
+    - cd x2-HdW/AI
+    - ./3rdparty/mwc.pl -type make AI.mwc
 script: make
