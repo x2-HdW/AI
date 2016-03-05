@@ -1,7 +1,33 @@
 language: cpp
+
+compiler: g++
+
+install:
+    # install latest LCOV (1.9 was failing)
+    - cd ${TRAVIS_BUILD_DIR}
+    - wget http://ftp.de.debian.org/debian/pool/main/l/lcov/lcov_1.11.orig.tar.gz
+    - tar xf lcov_1.11.orig.tar.gz
+    - sudo make -C lcov-1.11/ install
+    - gem install coveralls-lcov
+    - lcov --version
+    - g++ --version
+
 before_script:
+    # generate Makefiles using mpc
     - 3rdparty/mpc/mwc.pl -type make AI.mwc
-script: 
+    # init coverage to 0 (optional)
+    - lcov --directory . --zerocounters
+    # enable coverage
+    - exports CXX_FLAGS=${CXX_FLAGS} -g -O0 --coverage
+    
+script:
+    # build
     - make
-    - ls -al modules/example
+    # run tests
     - modules/example/foo
+    
+after_success:
+    - lcov --directory . --capture --output-file coverage.info
+    - lcov --remove coverage.info '/usr/*' --output-file coverage.info
+    - lcov --list coverage.info
+    - coveralls-lcov --repo-token ${COVERALLS_TOKEN} coverage.info
