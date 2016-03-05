@@ -1,10 +1,10 @@
 // $Id$
 project {
   specific(make){
-	CFLAGS += -g
-	CFLAGS += -O0
-	CFLAGS += -fprofile-arcs
-	CFLAGS += -ftest-coverage
+	CCFLAGS += -g
+	CCFLAGS += -O0
+	CCFLAGS += -fprofile-arcs
+	CCFLAGS += -ftest-coverage
 	LDLIBS += -lgcov
   }
 }
