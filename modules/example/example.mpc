@@ -1,4 +1,4 @@
-project(example) {
+project(example) : coverage {
   exename   = foo
   includes += "."
   includes += "./src"

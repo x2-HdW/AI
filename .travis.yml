@@ -14,13 +14,9 @@ install:
 
 before_script:
     # generate Makefiles using mpc
-    - 3rdparty/mpc/mwc.pl -type make AI.mwc
+    - 3rdparty/mpc/mwc.pl -type make -include tools/mpc
     # init coverage to 0 (optional)
     - lcov --directory . --zerocounters
-    # enable coverage
-    - echo $CXX_FLAGS
-    - export CXX_FLAGS="-g -O0 --coverage"
-    - echo $CXX_FLAGS
     
 script:
     # build
