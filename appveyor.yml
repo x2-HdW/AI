@@ -2,6 +2,7 @@ version: 1.0.{build}
 configuration: Debug
 before_build:
 - cmd: git submodule init
+- cmd: git submodule update
 - cmd: dir
 - cmd: dir 3rdparty
 - cmd: dir 3rdparty\mpc
