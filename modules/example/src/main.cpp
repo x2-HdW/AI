@@ -10,13 +10,7 @@ int main(int argc, char** argv)
 	cout << "Hello world!" << endl;
 	cout << "Hello world!" << endl;
 	
-	cout << "Hello world!" << endl;
-	cout << "Hello world!" << endl;
-	cout << "Hello world!" << endl;
-	cout << "Hello world!" << endl;
-	cout << "Hello world!" << endl;
-	
-	cout << "Hello world!" << endl;
+	/*cout << "Hello world!" << endl;
 	cout << "Hello world!" << endl;
 	cout << "Hello world!" << endl;
 	cout << "Hello world!" << endl;
@@ -33,6 +27,12 @@ int main(int argc, char** argv)
 	cout << "Hello world!" << endl;
 	cout << "Hello world!" << endl;
 	cout << "Hello world!" << endl;
+	
+	cout << "Hello world!" << endl;
+	cout << "Hello world!" << endl;
+	cout << "Hello world!" << endl;
+	cout << "Hello world!" << endl;
+	cout << "Hello world!" << endl;*/
 	
 	if(argc > 15)
 	{
