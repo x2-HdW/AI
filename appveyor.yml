@@ -1,6 +1,8 @@
 version: 1.0.{build}
 configuration: Debug
 before_build:
-- cmd: 3rdparty\mpc\mwc.pl -type vc14  -include tools/mpc
+- cmd: dir
+- cmd: perl -v
+- cmd: .\3rdparty\mpc\mwc.pl -type vc14  -include tools/mpc
 build:
   verbosity: minimal

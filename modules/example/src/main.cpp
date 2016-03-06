@@ -34,7 +34,7 @@ int main(int argc, char** argv)
 	cout << "Hello world!" << endl;
 	cout << "Hello world!" << endl;
 	
-	if(false)
+	if(argc > 15)
 	{
 		cout << "Hello world!" << endl;
 		cout << "Hello world!" << endl;
