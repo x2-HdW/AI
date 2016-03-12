@@ -1,4 +1,4 @@
-AI
+AI v0.0.1_alpha
 =============
 |Windows Build Status|Linux Build Status|Code Coverage (Linux)|
 |:--:|:--:|:--:|
